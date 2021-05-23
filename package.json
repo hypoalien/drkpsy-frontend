@@ -1,6 +1,6 @@
 {
   "name": "drkpsy-frontend",
-  "proxy": "https://drkpsy-nodejs.herokuapp.com/",
+  "proxy": "https://drkpsy-nodejs.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
