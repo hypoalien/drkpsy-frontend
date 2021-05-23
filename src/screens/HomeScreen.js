@@ -39,9 +39,9 @@ const HomeScreen = ({ match }) => {
   const productList = useSelector((state) => state.productList)
   const { loading, error, products, page, pages } = productList
 
-  const firstcard={...homeObjOne,...products[0]}
-  const secondcard={...homeObjTwo,...products[1]}
-  const thirdcard={...homeObjThree,...products[2]}
+  const firstcard={...homeObjOne}
+  const secondcard={...homeObjTwo}
+  const thirdcard={...homeObjThree}
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
