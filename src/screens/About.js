@@ -6,7 +6,7 @@ import MainFeature1 from "../components/features/TwoColWithButton.js";
 
 import Features from "../components/features/ThreeColSimple.js";
 
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
+// import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
 
 import SupportIconImage from "../components/images/support-icon.svg";
 import ShieldIconImage from "../components/images/shield-icon.svg";

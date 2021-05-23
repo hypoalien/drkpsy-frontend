@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col } from 'react-bootstrap'
+// import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
-import ProductCarousel from '../components/ProductCarousel'
-import Meta from '../components/Meta'
+// import ProductCarousel from '../components/ProductCarousel'
+// import Meta from '../components/Meta'
 import { listProducts } from '../actions/productActions'
-import HeroSection from '../components/HeroSection'
-import InfoSection from '../components/InfoSection';
+// import HeroSection from '../components/HeroSection'
+// import InfoSection from '../components/InfoSection';
 import { SectionHeading } from "../components/misc/Headings.js";
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts.js";
 import tw from "twin.macro";
@@ -39,9 +39,9 @@ const EventScreen = ({ match }) => {
   const productList = useSelector((state) => state.productList)
   const { loading, error, products, page, pages } = productList
 
-  const firstcard={...homeObjOne,...products[0]}
-  const secondcard={...homeObjTwo,...products[1]}
-  const thirdcard={...homeObjThree,...products[2]}
+  // const firstcard={...homeObjOne,...products[0]}
+  // const secondcard={...homeObjTwo,...products[1]}
+  // const thirdcard={...homeObjThree,...products[2]}
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))

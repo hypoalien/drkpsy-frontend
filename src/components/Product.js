@@ -6,7 +6,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { PrimaryButton as PrimaryButtonBase } from "./misc/Buttons.js";
 
-import {AiFillStar as StarIcon} from 'react-icons/ai'
 import {GoLocation as LocationIcon} from 'react-icons/go'
 import {BiRupee as PriceIcon} from 'react-icons/bi'
 import "../style.css"
@@ -15,15 +14,15 @@ const Title = tw.h5`text-2xl font-bold`;
 const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
 
 const TitleReviewContainer = tw.div`flex flex-col sm:flex-row sm:justify-between sm:items-center`;
-const RatingsInfo = styled.div`
-  ${tw`flex items-center sm:ml-4 mt-2 sm:mt-0`}
-  svg {
-    ${tw`w-6 h-6 text-yellow-500 fill-current`}
-  }
-`;
-const Rating = tw.span`ml-2 font-bold`;
+// const RatingsInfo = styled.div`
+//   ${tw`flex items-center sm:ml-4 mt-2 sm:mt-0`}
+//   svg {
+//     ${tw`w-6 h-6 text-yellow-500 fill-current`}
+//   }
+// `;
+// const Rating = tw.span`ml-2 font-bold`;
 
-const Description = tw.p`text-sm leading-loose mt-2 sm:mt-4`;
+// const Description = tw.p`text-sm leading-loose mt-2 sm:mt-4`;
                 
 
 const SecondaryInfoContainer = tw.div`flex flex-col sm:flex-row mt-2 sm:mt-4`;
