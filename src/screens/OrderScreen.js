@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../axios.js'
-import { PayPalButton } from 'react-paypal-button-v2'
+// import { PayPalButton } from 'react-paypal-button-v2'
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -76,15 +76,15 @@ const OrderScreen = ({ match, history }) => {
     }
   }, [dispatch, orderId, successPay, successDeliver, order])
 
-  const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult)
-    dispatch(payOrder(orderId, paymentResult))
-  }
+  // const successPaymentHandler = (paymentResult) => {
+  //   console.log(paymentResult)
+  //   dispatch(payOrder(orderId, paymentResult))
+  // }
 
   const deliverHandler = () => {
     dispatch(deliverOrder(order))
   }
-
+  console.log(order)
   return loading ? (
     <Loader />
   ) : error ? (
@@ -198,19 +198,23 @@ const OrderScreen = ({ match, history }) => {
               <ListGroup.Item>
                 <Row>
                   <Col>Ticket ID</Col>
-                  <Col>₹{order.ticket.ticket_id}</Col>
+                  <Col>{order.ticket_id}</Col>
+                 
                 </Row>
               </ListGroup.Item>
+              
               {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
                   {!sdkReady ? (
                     <Loader />
                   ) : (
-                    <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHandler}
-                    />
+                    // <PayPalButton
+                    //   amount={order.totalPrice}
+                    //   onSuccess={successPaymentHandler}
+                    // />
+                    <>
+                    </>
                   )}
                 </ListGroup.Item>
               )}
