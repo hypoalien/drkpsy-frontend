@@ -6,6 +6,8 @@ import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import QRCode from "react-qr-code";
+
 import {
   getOrderDetails,
   payOrder,
@@ -197,8 +199,19 @@ const OrderScreen = ({ match, history }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
+                
                   <Col>Ticket ID</Col>
                   <Col>{order.ticket_id}</Col>
+                 
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>
+                  <QRCode value={order.ticket_id} />
+                  </Col>
+                
+                  
                  
                 </Row>
               </ListGroup.Item>
