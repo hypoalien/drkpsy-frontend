@@ -1,5 +1,5 @@
 export const homeObjOne = {
-  // id: 'freedomblast ',
+  id: '60a2fa108856d74968347874',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -17,7 +17,7 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  // id: 'killatk',
+  id: '60a2fa108856d74968347875',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -35,7 +35,7 @@ export const homeObjTwo = {
 };
 
 export const homeObjThree = {
-  // id: 'darksystem',
+  id: '60a2fa108856d74968347876',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
