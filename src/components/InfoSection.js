@@ -122,7 +122,7 @@ const InfoSection = ({
     buttonLabel,
     img,
     alt,
-    _id,
+    id,
     primary,
     darkText,
     dark,
@@ -132,7 +132,7 @@ const InfoSection = ({
     console.log(primary);
     return (
       <>
-        <InfoContainer lightBg={lightBg} id={_id}>
+        <InfoContainer lightBg={lightBg} id={id}>
           <InfoWrapper>
             <InfoRow imgStart={imgStart}>
               <Column1>
@@ -142,7 +142,7 @@ const InfoSection = ({
                   <Heading lightText={lightText}>{headline}</Heading>
                   <Subtitle darkText={darkText}>{smalldescription}</Subtitle>
                   <BtnWrap>
-                    <LinkContainer to={`/events/${_id}`}>
+                    <LinkContainer to={`/events/${id}`}>
                     <Button
                       
                       smooth={true}
