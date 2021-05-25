@@ -5,8 +5,10 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
+import { Link } from 'react-router-dom';
 import "../style.css"
-
+import styled from 'styled-components'
+import logo from '../whiteLogo.png'
 const Header = () => {
   const dispatch = useDispatch()
 
@@ -17,12 +19,86 @@ const Header = () => {
     dispatch(logout())
   }
 
+  const Logo = styled(Link)`
+  color: #fff;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: glitch 1s linear infinite;
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  div:before,
+  div:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  div:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  div:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+`;
+
   return (
     <header>
       <Navbar className="navbar"  variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>Darkpsy</Navbar.Brand>
+          
+          
+              <Logo>
+              <img src={logo} alt="logo" className="logo"/>
+              </Logo>
+           
+            
           </LinkContainer>
          
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -30,13 +106,13 @@ const Header = () => {
          
             <Route  render={({ history }) => <SearchBox  history={history} />} />
             <LinkContainer  to='/about'>
-                <Nav.Link className='header-link ml-3'>
+                <Nav.Link className='header-link ml-3' >
                    About
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to='/events'>
                 <Nav.Link className='header-link ml-3'>
-                   Events
+                   All Events
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to='/contact'>

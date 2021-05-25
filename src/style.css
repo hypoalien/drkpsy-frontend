@@ -6,6 +6,8 @@ body,html{
 
 .navbar{
     background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .header-link{
     color: aliceblue;
@@ -29,3 +31,12 @@ body,html{
     border: black;
 }
 
+.logo{
+    height: 60px;
+    width: auto;
+    
+}
+
+.footer-heading{
+    color: white;
+}

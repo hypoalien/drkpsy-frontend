@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { PrimaryButton as PrimaryButtonBase } from "./misc/Buttons.js";
 
 import {GoLocation as LocationIcon} from 'react-icons/go'
-import {BiRupee as PriceIcon} from 'react-icons/bi'
+import {FaMoneyBill as PriceIcon} from 'react-icons/fa'
 import "../style.css"
 
 const Title = tw.h5`text-2xl font-bold`;
@@ -99,7 +99,7 @@ const Product = ({ product }) => {
                      <IconContainer>
                        <PriceIcon />
                      </IconContainer>
-                     <Text>{product.price}</Text>
+                     <Text>₹{product.price}</Text>
                    </IconWithText>
                  </SecondaryInfoContainer>
                  {/* <Description className="product-desc">{product.description}</Description> */}

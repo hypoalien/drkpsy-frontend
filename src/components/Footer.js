@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
+import "../style.css"
+import logo from '../whiteLogo.png'
 import {
     FaFacebook,
     FaInstagram,
@@ -11,7 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-  background-color: #101522;
+  background-color: #000;
 `;
 
 export const FooterWrap = styled.div`
@@ -200,7 +202,7 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
-                <FooterLinkTitle>About Us</FooterLinkTitle>
+                <FooterLinkTitle className="footer-heading">About Us</FooterLinkTitle>
                 
                 <FooterLink to='/about'>About</FooterLink>
                 
@@ -229,7 +231,7 @@ const Footer = () => {
                 <FooterLink to='/'>Influencer</FooterLink> */}
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>Social Media</FooterLinkTitle>
+                <FooterLinkTitle className="footer-heading">Social Media</FooterLinkTitle>
                 <FooterLink to='/'>Instagram</FooterLink>
                 <FooterLink to='/'>Facebook</FooterLink>
                 <FooterLink to='/'>Youtube</FooterLink>
@@ -240,9 +242,10 @@ const Footer = () => {
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to='/' onClick={toggleHome}>
-                Drkpsy
+              <img src={logo} alt="logo" className="logo"/>
+
               </SocialLogo>
-              <WebsiteRights>dolla © 2020 All rights reserved.</WebsiteRights>
+              <WebsiteRights>Blowouts © 2021 All rights reserved.</WebsiteRights>
               <SocialIcons>
                 <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
                   <FaFacebook />

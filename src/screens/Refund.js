@@ -111,7 +111,7 @@ CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has
               </p>
               <p>
               Next contact your bank. There is often some processing time before a refund is posted.
-If you’ve done all of this and you still have not received your refund yet, please contact us at support@drkpsy.com.
+If you’ve done all of this and you still have not received your refund yet, please contact us at contact@blowouts.in.
               </p>
               <h1>
               Sale items (if applicable)
@@ -123,7 +123,7 @@ If you’ve done all of this and you still have not received your refund yet, pl
               Exchanges (if applicable)
               </h1>
               <p>
-              We only replace items if they are defective or damaged.  If you need to exchange it for the same item, send us an email at support@drkpsy.com .
+              We only replace items if they are defective or damaged.  If you need to exchange it for the same item, send us an email at contact@blowouts.in .
               </p>
               <h1>
                 Gifts
@@ -138,7 +138,7 @@ If you’ve done all of this and you still have not received your refund yet, pl
               Shipping
               </h1>
               <p>
-              To return your product, you should contact us at support@drkpsy.com
+              To return your product, you should contact us at contact@blowouts.in
               </p>
               <p>
               You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.

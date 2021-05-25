@@ -17,8 +17,8 @@ export default () => {
   return (
     <>
       <MainFeature1
-        subheading={<Subheading>About Drkpsy</Subheading>}
-        heading="We are a modern design agency."
+        subheading={<Subheading>About Blowouts</Subheading>}
+        heading="We are a ticketing and event promotion agency."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"

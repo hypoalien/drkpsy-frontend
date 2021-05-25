@@ -1,5 +1,6 @@
 import axios from '../axios.js'
 import { CART_CLEAR_ITEMS } from '../constants/cartConstants'
+import logo from '../whiteLogo.png'
 import {
   ORDER_CREATE_REQUEST,
   ORDER_CREATE_SUCCESS,
@@ -83,9 +84,9 @@ export const createOrder = (order) => async (dispatch, getState) => {
         amount: data.razorpay.amount.toString(),
         order_id: data.razorpay.order_id,
        
-        name: 'Drkpsy',
-        description: 'Thank you for nothing. Please give us some money',
-        image: 'http://localhost:1337/logo.svg',
+        name: 'Blowouts',
+        description: 'Thank you for choosing Blowout. Please fill out the details to proceed for the payment',
+        image: {logo},
         handler: function (response) {
           
           alert(response.razorpay_payment_id)
@@ -105,8 +106,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         },
         prefill: {
           
-          email: 'sdfdsjfh2@ndsfdf.com',
-          phone_number: '9899999999'
+         
         }
       }
       const paymentObject = new window.Razorpay(options)

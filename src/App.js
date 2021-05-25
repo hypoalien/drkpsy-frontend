@@ -29,7 +29,7 @@ import "./style.css"
 const App = () => {
   return (
     <Router>
-      <Header />
+      <Header/>
       <Route path='/search/:keyword' component={HomeScreen} exact />
           <Route path='/page/:pageNumber' component={HomeScreen} exact />
           <Route

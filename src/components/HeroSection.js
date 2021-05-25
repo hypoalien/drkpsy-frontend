@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LinkContainer } from 'react-router-bootstrap'
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import React, { useState } from 'react';
 import { Button } from './ButtonElements';
@@ -132,8 +133,9 @@ function HeroSection() {
           Discover Underground events around the world
           </HeroP>
           <HeroBtnWrapper>
+            <LinkContainer to='/' >
             <Button
-              to='signup'
+              to='/login'
               smooth={true}
               duration={500}
               spy={true}
@@ -146,6 +148,8 @@ function HeroSection() {
             >
               Get Started {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
+            </LinkContainer >
+           
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>
