@@ -125,7 +125,7 @@ function HeroSection() {
     return (
       <HeroContainer id='home'>
         <HeroBg>
-          <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
+          <VideoBg playsInline autoPlay loop muted src={"https://raveindia-s3.s3.ap-south-1.amazonaws.com/banner.mp4s"} type='video/mp4' />
         </HeroBg>
         <HeroContent>
           <HeroH1> Discover Events and Music</HeroH1>
