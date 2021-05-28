@@ -10,7 +10,7 @@ export const homeObjOne = {
   buttonLabel: 'Buy Now',
   imgStart: false,
   img: require('./images/freedomblast.jpg').default,
-  alt: 'Car',
+  alt: 'freedomblast',
   dark: true,
   primary: true,
   darkText: false
@@ -28,7 +28,7 @@ export const homeObjTwo = {
   buttonLabel: 'Coming Soon',
   imgStart: true,
   img: require('./images/killa.jpg').default,
-  alt: 'Piggybank',
+  alt: 'killatk  ',
   dark: false,
   primary: false,
   darkText: true

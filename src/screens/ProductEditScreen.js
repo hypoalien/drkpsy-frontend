@@ -54,6 +54,7 @@ const ProductEditScreen = ({ match, history }) => {
         setDescription(product.description)
         setLocation(product.location)
         setLinkname(product.linkname)
+        
       }
     }
   }, [dispatch, history, productId, product, successUpdate])
@@ -94,7 +95,8 @@ const ProductEditScreen = ({ match, history }) => {
         description,
         countInStock,
         location,
-        linkname
+        linkname,
+        
       })
     )
   }
@@ -192,6 +194,8 @@ const ProductEditScreen = ({ match, history }) => {
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
+
+            
 
             <Form.Group controlId='location'>
               <Form.Label>Location</Form.Label>

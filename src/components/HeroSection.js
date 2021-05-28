@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import React, { useState } from 'react';
 import { Button } from './ButtonElements';
 // import Video from '../videos/video.mp4';
-import Video from '../videos/banner.mp4';
+
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;

@@ -48,6 +48,7 @@ const ProductScreen = ({ history, match }) => {
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
+  
 
   // const submitHandler = (e) => {
   //   e.preventDefault()
@@ -79,15 +80,23 @@ const ProductScreen = ({ history, match }) => {
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
-                <ListGroup.Item>
-                  <h3>{product.name}</h3>
-                </ListGroup.Item>
-               
+                <ListGroup.Item><h3>{product.name}</h3> </ListGroup.Item>
                 <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {product.description}
-                </ListGroup.Item>
+                
+                <ListGroup.Item> Description: {product.description} </ListGroup.Item>
               </ListGroup>
+              <br>
+              </br>
+              <ListGroup>
+                <ListGroup.Item><h3>Line Up </h3></ListGroup.Item>
+                {product.lineup.map((line) => (
+                  <ListGroup.Item><p>	&#128293; {line}</p></ListGroup.Item>
+             
+            ))}
+              </ListGroup>
+
+              
+
             </Col>
             <Col md={3}>
               <Card>

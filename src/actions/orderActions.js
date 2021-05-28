@@ -84,14 +84,14 @@ export const createOrder = (order) => async (dispatch, getState) => {
         amount: data.razorpay.amount.toString(),
         order_id: data.razorpay.order_id,
        
-        name: 'Blowouts',
-        description: 'Thank you for choosing Blowout. Please fill out the details to proceed for the payment',
+        name: 'Raveinda',
+        description: 'Thank you for choosing Raveinda. Please fill out the details to proceed for the payment',
         image: {logo},
         handler: function (response) {
-          
-          alert(response.razorpay_payment_id)
-          alert(response.razorpay_order_id)
-          alert(response.razorpay_signature)
+          alert("PAYMENT SUCCESSFUL !, Press ok to REDIRECT")
+          // alert(response.razorpay_payment_id)
+          // alert(response.razorpay_order_id)
+          // alert(response.razorpay_signature)
           console.log("order object")
       console.log(data)
           dispatch({
