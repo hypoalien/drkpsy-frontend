@@ -16,9 +16,7 @@ import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
-  const [rating, setRating] = useState(0)
-  const [comment, setComment] = useState('')
-
+  
   const dispatch = useDispatch()
 
   const productDetails = useSelector((state) => state.productDetails)
@@ -34,11 +32,10 @@ const ProductScreen = ({ history, match }) => {
     // error: errorProductReview,
   } = productReviewCreate
 
+
+
   useEffect(() => {
-    if (successProductReview) {
-      setRating(0)
-      setComment('')
-    }
+   
     if (!product._id || product._id !== match.params.id) {
       dispatch(listProductDetails(match.params.id))
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
@@ -49,16 +46,13 @@ const ProductScreen = ({ history, match }) => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
   
-
-  // const submitHandler = (e) => {
-  //   e.preventDefault()
-  //   dispatch(
-  //     createProductReview(match.params.id, {
-  //       rating,
-  //       comment,
-  //     })
-  //   )
-  // }
+ let itemsToRender;
+  if (product.lineup) {
+    itemsToRender = product.lineup.map( (line,index) => (
+      <ListGroup.Item><p key={index}>	&#128293; {line}</p></ListGroup.Item>))
+    }else{
+      itemsToRender='Loading ..'
+    }
 
   return (
     < main className="py-3">
@@ -89,10 +83,14 @@ const ProductScreen = ({ history, match }) => {
               </br>
               <ListGroup>
                 <ListGroup.Item><h3>Line Up </h3></ListGroup.Item>
-                {product.lineup.map((line) => (
-                  <ListGroup.Item><p>	&#128293; {line}</p></ListGroup.Item>
-             
-            ))}
+          
+                  <div>
+                    {itemsToRender}
+                  </div>
+                  <br>
+                  </br>
+                
+                 
               </ListGroup>
 
               

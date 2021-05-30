@@ -41,7 +41,7 @@ const HomeScreen = ({ match }) => {
 
   const firstcard={...homeObjOne}
   const secondcard={...homeObjTwo}
-  const thirdcard={...homeObjThree}
+ 
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
@@ -54,7 +54,7 @@ const HomeScreen = ({ match }) => {
       <Meta />
       <InfoSection {...firstcard} />
        <InfoSection {...secondcard} />
-       <InfoSection {...thirdcard} />
+       
      
       {loading ? (
         <Loader />

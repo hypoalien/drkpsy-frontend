@@ -1,5 +1,7 @@
+
+
 export const homeObjOne = {
-  id: '60a2fa108856d74968347874',
+  id: '60b16f15993e2280dc415aa8',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -17,7 +19,7 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  id: '60a2fa108856d74968347875',
+  id: '60b16f15993e2280dc415aa9',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
