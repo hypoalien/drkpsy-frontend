@@ -5,6 +5,7 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 import { Container } from 'react-bootstrap'
+import{BsTrash} from 'react-icons/bs'
 
 
 const CartScreen = ({ match, location, history }) => {
@@ -76,7 +77,8 @@ const CartScreen = ({ match, location, history }) => {
                       variant='dark'
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className='fas fa-trash'></i>
+                      <BsTrash></BsTrash>
+                     
                     </Button>
                   </Col>
                 </Row>
