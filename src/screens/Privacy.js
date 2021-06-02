@@ -69,7 +69,7 @@ If we ask for your personal information for a secondary reason, like marketing, 
 
           
             <h2>How do I withdraw my consent?</h2>
-            <p>If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@blowouts.in or mailing us at: G-Floor,Modern Profound Tech Park, White Field Rd, Whitefields, Kondapur, Telangana 500084</p>
+            <p>If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@raveindia.in or mailing us at: G-Floor,Modern Profound Tech Park, White Field Rd, Whitefields, Kondapur, Telangana 500084</p>
 
             <h1>SECTION 3 - DISCLOSURE</h1>
             
@@ -138,7 +138,7 @@ QUESTIONS AND CONTACT INFORMATION
 
             </p>
             <p>
-            If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at contact@blowouts.in or by mail at G-Floor,Modern Profound Tech Park, White Field Rd, Whitefields, Kondapur, Telangana 500084
+            If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at contact@raveindia.in or by mail at G-Floor,Modern Profound Tech Park, White Field Rd, Whitefields, Kondapur, Telangana 500084
             </p>
 
             <p>

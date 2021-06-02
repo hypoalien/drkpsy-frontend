@@ -12,7 +12,7 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Blowouts | Tickets',
+  title: 'raveindia | Tickets',
   description: 'We sell exclusive event tickets for best price',
   keywords: 'events,parties,goa,darkpsy,hitech',
 }

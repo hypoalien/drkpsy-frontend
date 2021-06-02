@@ -245,7 +245,7 @@ const Footer = () => {
               <img src={logo} alt="logo" className="logo"/>
 
               </SocialLogo>
-              <WebsiteRights>Blowouts © 2021 All rights reserved.</WebsiteRights>
+              <WebsiteRights>raveindia © 2021 All rights reserved.</WebsiteRights>
               <SocialIcons>
                 <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
                   <FaFacebook />

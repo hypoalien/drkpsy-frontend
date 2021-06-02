@@ -17,7 +17,7 @@ export default () => {
   return (
     <>
       <MainFeature1
-        subheading={<Subheading>About Blowouts</Subheading>}
+        subheading={<Subheading>About raveindia</Subheading>}
         heading="We are a ticketing and event promotion agency."
         buttonRounded={false}
         primaryButtonText="See Portfolio"

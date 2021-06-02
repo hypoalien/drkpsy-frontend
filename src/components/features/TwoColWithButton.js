@@ -47,7 +47,7 @@ export default ({
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Hello, We are Blowouts, a ticketing platform for unconventional music events and Psychedelic festivals. we are here to provide a seemless ticketing solution for organizers and the users.  ",
+  description = "Hello, We are raveindia, a ticketing platform for unconventional music events and Psychedelic festivals. we are here to provide a seemless ticketing solution for organizers and the users.  ",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = TeamIllustrationSrc,
