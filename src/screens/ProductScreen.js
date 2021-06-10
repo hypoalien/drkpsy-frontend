@@ -36,14 +36,14 @@ const ProductScreen = ({ history, match }) => {
 
   useEffect(() => {
    
-    if (!product._id || product._id !== match.params.id) {
-      dispatch(listProductDetails(match.params.id))
+    if (!product.linkname || product.linkname !== match.params.linkname) {
+      dispatch(listProductDetails(match.params.linkname))
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
     }
   }, [dispatch, match, successProductReview])
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params.id}?qty=${qty}`)
+    history.push(`/cart/${match.params.linkname}?qty=${qty}`)
   }
   
  let itemsToRender;

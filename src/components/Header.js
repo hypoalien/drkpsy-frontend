@@ -92,12 +92,9 @@ const Header = () => {
       <Navbar className="navbar"  variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
+          <Navbar.Brand >RAVEINDIA</Navbar.Brand>
           
-          
-              <Logo>
-              <img src={logo} alt="logo" className="logo"/>
-              </Logo>
-           
+            
             
           </LinkContainer>
          
@@ -105,12 +102,9 @@ const Header = () => {
           <Navbar.Collapse id='basic-navbar-nav'>
          
             <Route  render={({ history }) => <SearchBox  history={history} />} />
-            <LinkContainer  to='/about'>
-                <Nav.Link className='header-link ml-3' >
-                   About
-                </Nav.Link>
-              </LinkContainer>
-              <LinkContainer to='/events'>
+            
+            
+            <LinkContainer to='/events'>
                 <Nav.Link className='header-link ml-3'>
                    All Events
                 </Nav.Link>

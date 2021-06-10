@@ -12,17 +12,18 @@ import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 
 const ProductEditScreen = ({ match, history }) => {
-  const productId = match.params.id
+  const productLinkname = match.params.linkname
 
   const [name, setName] = useState('')
-  const [price, setPrice] = useState(0)
-  const [image, setImage] = useState('')
-  const [brand, setBrand] = useState('')
-  const [category, setCategory] = useState('')
-  const [countInStock, setCountInStock] = useState(0)
-  const [description, setDescription] = useState('')
+  const [date, setDate] = useState('')
   const [location, setLocation] = useState('')
+  const [description, setDescription] = useState('')
+  const [price, setPrice] = useState(0)
+  const [trending,setTrending] = useState('')
+  const [image, setImage] = useState('')
   const [linkname, setLinkname] = useState('')
+  const [lineup, setLineup] = useState('')
+  const [countInStock, setCountInStock] = useState(0)
   const [uploading, setUploading] = useState(false)
 
   const dispatch = useDispatch()
@@ -42,22 +43,23 @@ const ProductEditScreen = ({ match, history }) => {
       dispatch({ type: PRODUCT_UPDATE_RESET })
       history.push('/admin/productlist')
     } else {
-      if (!product.name || product._id !== productId) {
-        dispatch(listProductDetails(productId))
+      if (!product.name || product.linkname !== productLinkname) {
+        dispatch(listProductDetails(productLinkname))
       } else {
         setName(product.name)
-        setPrice(product.price)
-        setImage(product.image)
-        setBrand(product.brand)
-        setCategory(product.category)
-        setCountInStock(product.countInStock)
-        setDescription(product.description)
+        setDate(product.date)
         setLocation(product.location)
+        setDescription(product.description)
+        setPrice(product.price)
+        setTrending(product.trending)
+        setImage(product.image)
         setLinkname(product.linkname)
-        
+        setLineup(product.lineup)
+        setCountInStock(product.countInStock)
+    
       }
     }
-  }, [dispatch, history, productId, product, successUpdate])
+  }, [dispatch, history, productLinkname, product, successUpdate])
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0]
@@ -86,16 +88,17 @@ const ProductEditScreen = ({ match, history }) => {
     e.preventDefault()
     dispatch(
       updateProduct({
-        _id: productId,
+        
         name,
-        price,
-        image,
-        brand,
-        category,
-        description,
-        countInStock,
+        date,
         location,
-        linkname,
+        description,
+        price,
+        trending,
+        image,
+        linkname: productLinkname,
+        lineup,
+        countInStock,
         
       })
     )
@@ -128,6 +131,36 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
+            <Form.Group controlId='date'>
+              <Form.Label>Date</Form.Label>
+              <Form.Control
+                type='date'
+                placeholder='Enter date'
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='location'>
+              <Form.Label>Location</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter location'
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='description'>
+              <Form.Label>Description</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter description'
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
             <Form.Group controlId='price'>
               <Form.Label>Price</Form.Label>
               <Form.Control
@@ -135,6 +168,17 @@ const ProductEditScreen = ({ match, history }) => {
                 placeholder='Enter price'
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            
+            <Form.Group controlId='trending'>
+              <Form.Label>Trending</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter true or false'
+                value={trending}
+                onChange={(e) => setTrending(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
@@ -155,13 +199,23 @@ const ProductEditScreen = ({ match, history }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
+            <Form.Group controlId='linkname'>
+              <Form.Label>Link Name</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Enter brand'
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
+                placeholder='Enter link name'
+                value={linkname}
+                onChange={(e) => setLinkname(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='lineup'>
+              <Form.Label>Lineup</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter lineup'
+                value={lineup}
+                onChange={(e) => setLineup(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
@@ -175,49 +229,7 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='category'>
-              <Form.Label>Category</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter category'
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
-            <Form.Group controlId='description'>
-              <Form.Label>Description</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter description'
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
-            
-
-            <Form.Group controlId='location'>
-              <Form.Label>Location</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter location'
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
-            <Form.Group controlId='linkname'>
-              <Form.Label>Linkname</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter linkname'
-                value={linkname}
-                onChange={(e) => setLinkname(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
-            
+          
             <Button type='submit' variant='primary'>
               Update
             </Button>

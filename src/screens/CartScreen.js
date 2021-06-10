@@ -9,7 +9,7 @@ import{BsTrash} from 'react-icons/bs'
 
 
 const CartScreen = ({ match, location, history }) => {
-  const productId = match.params.id
+  const productLinkname = match.params.linkname
 
   const qty = location.search ? Number(location.search.split('=')[1]) : 1
 
@@ -19,13 +19,13 @@ const CartScreen = ({ match, location, history }) => {
   const { cartItems } = cart
 
   useEffect(() => {
-    if (productId) {
-      dispatch(addToCart(productId, qty))
+    if (productLinkname) {
+      dispatch(addToCart(productLinkname, qty))
     }
-  }, [dispatch, productId, qty])
+  }, [dispatch, productLinkname, qty])
 
-  const removeFromCartHandler = (id) => {
-    dispatch(removeFromCart(id))
+  const removeFromCartHandler = (linkname) => {
+    dispatch(removeFromCart(linkname))
   }
 
   const checkoutHandler = () => {

@@ -49,11 +49,11 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
   }
 }
 
-export const listProductDetails = (id) => async (dispatch) => {
+export const listProductDetails = (linkname) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-    const { data } = await axios.get(`/api/products/${id}`)
+    const { data } = await axios.get(`/api/products/${linkname}`)
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -70,7 +70,7 @@ export const listProductDetails = (id) => async (dispatch) => {
   }
 }
 
-export const deleteProduct = (id) => async (dispatch, getState) => {
+export const deleteProduct = (linkname) => async (dispatch, getState) => {
   try {
     dispatch({
       type: PRODUCT_DELETE_REQUEST,
@@ -86,7 +86,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
       },
     }
 
-    await axios.delete(`/api/products/${id}`, config)
+    await axios.delete(`/api/products/${linkname}`, config)
 
     dispatch({
       type: PRODUCT_DELETE_SUCCESS,
@@ -161,7 +161,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/products/${product._id}`,
+      `/api/products/${product.linkname}`,
       product,
       config
     )
@@ -186,7 +186,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
   }
 }
 
-export const createProductReview = (productId, review) => async (
+export const createProductReview = (linkname, review) => async (
   dispatch,
   getState
 ) => {
@@ -206,7 +206,7 @@ export const createProductReview = (productId, review) => async (
       },
     }
 
-    await axios.post(`/api/products/${productId}/reviews`, review, config)
+    await axios.post(`/api/products/${linkname}/reviews`, review, config)
 
     dispatch({
       type: PRODUCT_CREATE_REVIEW_SUCCESS,

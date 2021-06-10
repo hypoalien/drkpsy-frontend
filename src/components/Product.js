@@ -104,7 +104,7 @@ const Product = ({ product }) => {
                  </SecondaryInfoContainer>
                  {/* <Description className="product-desc">{product.description}</Description> */}
                </TextInfo>
-               <Link to={`/events/${product._id}`}>
+               <Link to={`/events/${product.linkname}`}>
                <PrimaryButton >Book Now</PrimaryButton>
                </Link>
               
