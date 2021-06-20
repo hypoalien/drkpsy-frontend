@@ -29,7 +29,7 @@ export const homeObjTwo = {
     '27th August 2021',
   buttonLabel: 'Buy Now',
   imgStart: true,
-  img: require('./images/killa-hyd.jpg').default,
+  img: require('./images/killa-hyd.jpeg').default,
   alt: 'killatk  ',
   dark: false,
   primary: false,
