@@ -36,7 +36,7 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 export default ({
   subheading = "Contact Us",
   heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr/> with us.</>,
-  description = "We are available 24/7, please send us email at contact@raveindia.in",
+  description = "We are available 24/7, please send us email at info@raveindia.in",
   submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",

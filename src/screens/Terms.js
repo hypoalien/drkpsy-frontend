@@ -300,7 +300,7 @@ We reserve the right, at our sole discretion, to update, change or replace any p
               SECTION 20 - CONTACT INFORMATION
               </h1>
               <p>
-              Questions about the Terms of Service should be sent to us at contact@raveindia.in
+              Questions about the Terms of Service should be sent to us at info@raveindia.in
               </p>
 
 

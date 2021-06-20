@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 import {
   homeObjOne,
   homeObjTwo,
-  homeObjThree
+ 
 } from '../components/Data';
 // import { Container } from 'react-bootstrap'
 import "../style.css"
