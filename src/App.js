@@ -24,12 +24,54 @@ import RefundScreen from './screens/Refund'
 import AboutScreen from './screens/About'
 import EventsScreen from './screens/Events'
 import ScrollToTop from './components/ScrollToTop'
+import {ALLOWED_IDLE_TIME} from './constants/userConstants'
+import { useDispatch } from 'react-redux'
+import { logout } from './actions/userActions'
 
 import "./style.css"
 
 const App = () => {
+  
+
+  let previousTime =0
+
+  const dispatch = useDispatch()
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
+  const getCurrentTime=()=>{
+        const date = new Date()
+        const currentTime= date.getTime()
+        return currentTime
+  }
+  const getPreviousNavTime=()=>{
+    return previousTime
+  }
+  const storeCurrentNavTime=()=>{
+    const date = new Date()
+        const currentTime= date.getTime()
+        previousTime=currentTime
+        
+  }
+  
+
+ const onUserNavigate=()=>{
+  
+  let idleTime = getCurrentTime() - getPreviousNavTime();
+  storeCurrentNavTime();
+  console.log(idleTime)
+  console.log(previousTime)
+ 
+  
+  if (idleTime > 10000)
+    logoutHandler()
+    console.info("log out")
+     
+ 
+ }
+  
   return (
-    <Router>
+    <Router onEnter={onUserNavigate} onChange={onUserNavigate}>
       <ScrollToTop>
       <Header/>
       <Route path='/search/:keyword' component={HomeScreen} exact />
