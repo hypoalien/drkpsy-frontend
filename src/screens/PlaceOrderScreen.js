@@ -172,18 +172,18 @@ const PlaceOrderScreen = ({ history }) => {
                 {error && <Message variant='danger'>{error}</Message>}
               </ListGroup.Item>
               <Form onSubmit={promoHandler}>
-              <Form.Group controlId='promo'>
-          <Form.Label>Promocode</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter Promo Code'
-            value={promo}
-            onChange={(e) => setPromo(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-        <Button type='submit' variant='primary'>
-          Apply
-        </Button>
+                    <Form.Group controlId='promo'>
+                <Form.Label>Promocode</Form.Label>
+                <Form.Control
+                  type='text'
+                  placeholder='Enter Promo Code'
+                  value={promo}
+                  onChange={(e) => setPromo(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
+              <Button type='submit' variant='primary'>
+                Apply
+              </Button>
               </Form>
            
 
