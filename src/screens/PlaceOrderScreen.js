@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect ,useState} from 'react'
 import { Link } from 'react-router-dom'
-import {Container, Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
+import {Container,Form, Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import CheckoutSteps from '../components/CheckoutSteps'
@@ -10,6 +10,8 @@ import { USER_DETAILS_RESET } from '../constants/userConstants'
 import Loader from '../components/Loader'
 
 const PlaceOrderScreen = ({ history }) => {
+  const [promo, setPromo] = useState('')
+  const [message, setMessage] = useState(null)
   const dispatch = useDispatch()
 
   const cart = useSelector((state) => state.cart)
@@ -52,7 +54,15 @@ const PlaceOrderScreen = ({ history }) => {
     // eslint-disable-next-line
   }, [history, success])
 
+  const promoHandler = (e) => {
+    e.preventDefault()
+    if (promo === "auf200"||promo ==="AUF200"||promo==="hypo200"||promo==="HYPO200") {
+      setMessage('Promo applied get 200 off on checkout')
+    } else {
+      setMessage('Promo invalid')
 
+    }
+  }
 
   const placeOrderHandler = () => {
 
@@ -65,6 +75,7 @@ const PlaceOrderScreen = ({ history }) => {
         shippingPrice: 0,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
+        promo:promo
       })
     )
   }
@@ -74,6 +85,7 @@ const PlaceOrderScreen = ({ history }) => {
     < main className="py-3">
         <Container>
         <CheckoutSteps step1 step2 step3 step4 />
+        {message && <Message variant='info'>{message}</Message>}
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
@@ -159,6 +171,22 @@ const PlaceOrderScreen = ({ history }) => {
               <ListGroup.Item>
                 {error && <Message variant='danger'>{error}</Message>}
               </ListGroup.Item>
+              <Form onSubmit={promoHandler}>
+              <Form.Group controlId='promo'>
+          <Form.Label>Promocode</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Enter Promo Code'
+            value={promo}
+            onChange={(e) => setPromo(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+        <Button type='submit' variant='primary'>
+          Apply
+        </Button>
+              </Form>
+           
+
               <ListGroup.Item>
                 
                 <Button
