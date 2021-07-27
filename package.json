@@ -1,7 +1,6 @@
 {
   "name": "drkpsy-frontend",
-  "proxy": "https://raveindia.herokuapp.com/",
-
+  "proxy": "https://raveindia.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
