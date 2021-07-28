@@ -56,7 +56,7 @@ const PlaceOrderScreen = ({ history }) => {
 
   const promoHandler = (e) => {
     e.preventDefault()
-    if (promo === "auf200"||promo ==="AUF200"||promo==="hypo200"||promo==="HYPO200") {
+    if (promo === "dhsgjkcn"||promo ==="dhsgjkcn"||promo==="dhsgjkcn"||promo==="dhsgjkcn") {
       setMessage('Promo applied get 200 off on checkout')
     } else {
       setMessage('Promo invalid')
