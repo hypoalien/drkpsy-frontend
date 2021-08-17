@@ -93,6 +93,9 @@ CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has
             Refunds (if applicable)
 
             </h1>
+            <p>
+              Refunds for e-tickets for an event can be processed only if the event gets cancelled. The time taken to refund the amount can be anywhere in between 30-45 days. Under certain circumstances refund for an e-ticket can be processed under the authority of the organizers.   
+              </p>
               <p>
               Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.
               </p>
