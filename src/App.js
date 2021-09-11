@@ -24,6 +24,7 @@ import RefundScreen from './screens/Refund'
 import AboutScreen from './screens/About'
 import EventsScreen from './screens/Events'
 import ScrollToTop from './components/ScrollToTop'
+import Promo from './screens/Promo'
 import {ALLOWED_IDLE_TIME} from './constants/userConstants'
 import { useDispatch } from 'react-redux'
 import { logout } from './actions/userActions'
@@ -113,6 +114,7 @@ const App = () => {
       <Route path='/admin/events/:linkname/edit' component={ProductEditScreen} />
       <Route path='/admin/orderlist' component={OrderListScreen} /> 
       <Route path='/order/:id' component={OrderScreen} />
+      <Route path ='/promo' component={Promo}></Route>
       {/* < main className="py-3">
         <Container>
           
